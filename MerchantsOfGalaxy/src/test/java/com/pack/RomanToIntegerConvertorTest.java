@@ -38,16 +38,16 @@ public class RomanToIntegerConvertorTest {
 		RomanToIntegerInterface iroman = new RomanToIntegerConvertor(new UnitsAndRoman());
 		
 		String input="MCMXLIV";
-		assertEquals(iroman.compute(input), 1944);
+		assertEquals(iroman.Convertor(input), 1944);
 	}
 	
 	@Test
 	public void When_RomanIsRepeated_Returns_RomanInInteger() {
 		RomanToIntegerInterface iroman = new RomanToIntegerConvertor(new UnitsAndRoman());
 		
-		String input="XXX";
+		String input="XXXX";
 		
-		assertEquals(iroman.compute(input), 30);
+		assertEquals(iroman.Convertor(input), 0);
 		
 	}
 	
@@ -60,7 +60,6 @@ public class RomanToIntegerConvertorTest {
 		
 		assertFalse(iroman.Validate(input));
 		
-		
 	}
 	
 	@Test
@@ -72,6 +71,5 @@ public class RomanToIntegerConvertorTest {
 		assertEquals(iroman.compute(input), 0);
 		
 	}
-	
 	
 }

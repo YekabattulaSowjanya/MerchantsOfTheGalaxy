@@ -17,6 +17,11 @@ public class RomanToIntegerConvertor implements RomanToIntegerInterface {
 	}
 
 
+	public RomanToIntegerConvertor() {
+		
+	}
+
+
 	public boolean Validate(String inputRomanValue) {
 		
 		
@@ -60,11 +65,8 @@ public class RomanToIntegerConvertor implements RomanToIntegerInterface {
 					
 				}
 		
-		return true;
-		
+		return true;	
 	}
-
-	
 
 	public int compute(String inputRomanValue) {
 
@@ -151,7 +153,19 @@ public class RomanToIntegerConvertor implements RomanToIntegerInterface {
 			}
 		}
 		return result;
-		
 	}
 
+	
+	  public int Convertor(String value) 
+	  {
+		  
+		  RomanToIntegerConvertor convertor = new RomanToIntegerConvertor(); 
+	  if(convertor.Validate(value)) 
+	  { 
+		  return (convertor.compute(value)); 
+	  } 
+	  return 0; 
+	  
+	  }
+	 
 }
